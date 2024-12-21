@@ -1,0 +1,6 @@
+CREATE TABLE currency_rates (
+id SERIAL PRIMARY KEY,
+type VARCHAR(10) NOT NULL,
+currency VARCHAR(10) NOT NULL,
+rate DECIMAL NOT NULL
+);

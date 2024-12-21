@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: TranzzoTask
+  r2dbc:
+    username: ${PGUSER:postgres}
+    password: ${PGPASSWORD}AliaS380
+    url: r2dbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:TranzzoDb}
+
+  liquibase:
+    enabled: true
+    user: ${PGUSER:postgres}
+    password: ${PGPASSWORD}
+    change-log: classpath:/db.changelog/db.changelog-master.yaml
+    url: jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:TranzzoDb}?user=${PGUSER:postgres}&password=${PGPASSWORD}
+    database-change-log-table: schema_history
+    database-change-log-lock-table: schema_lock_history
+
+currencies-provider:
+  url: ${SUPPLIER_URL:http://localhost:8081}
+
+springdoc:
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+    path: /user/swagger-ui/index.html
+    url: /user/api-docs
+  api-docs:
+    path: /user/api-docs
