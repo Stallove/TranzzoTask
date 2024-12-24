@@ -1,6 +1,5 @@
 package org.tranzzo.task.model;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,10 +17,7 @@ import java.math.BigDecimal;
 public class CurrencyRate {
     @Id
     Long id;
-    @NotNull
     String type;
-    @NotNull
     String currency;
-    @NotNull
     BigDecimal rate;
 }

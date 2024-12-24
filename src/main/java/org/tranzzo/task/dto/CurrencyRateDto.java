@@ -2,7 +2,6 @@ package org.tranzzo.task.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,9 +14,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CurrencyRateDto {
-    @NotNull
     private String currency;
-    @NotNull
     private BigDecimal rate;
 
     @JsonCreator

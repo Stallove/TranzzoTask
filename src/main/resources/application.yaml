@@ -3,7 +3,7 @@ spring:
     name: TranzzoTask
   r2dbc:
     username: ${PGUSER:postgres}
-    password: ${PGPASSWORD}AliaS380
+    password: ${PGPASSWORD}
     url: r2dbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:TranzzoDb}
 
   liquibase:
@@ -14,9 +14,11 @@ spring:
     url: jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:TranzzoDb}?user=${PGUSER:postgres}&password=${PGPASSWORD}
     database-change-log-table: schema_history
     database-change-log-lock-table: schema_lock_history
+    driver-class-name: org.postgresql.Driver
 
 currencies-provider:
   url: ${SUPPLIER_URL:http://localhost:8081}
+  fiat-api-key: ${FIAT_API_KEY:secret-key}
 
 springdoc:
   show-actuator: true

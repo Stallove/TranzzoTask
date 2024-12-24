@@ -1,0 +1,17 @@
+-Dspring.r2dbc.username=postgres
+-Dspring.r2dbc.password=<your_password>
+-Dspring.r2dbc.url=r2dbc:postgresql://localhost:5432/TranzzoDb
+-Dspring.liquibase.user=postgres
+-Dspring.liquibase.password=<your_password>
+-Dspring.liquibase.url=jdbc:postgresql://localhost:5432/TranzzoDb?user=postgres&password=<your_password>
+-Dcurrencies-provider.url=http://localhost:8081
+-Dcurrencies-provider.fiat-api-key=secret-key
+
+
+PGUSER=postgres;
+PGPASSWORD=your_password;
+PGHOST=localhost;
+PGPORT=5432;
+PGDATABASE=TranzzoDb;
+SUPPLIER_URL=http://localhost:8081;
+FIAT_API_KEY=secret-key
